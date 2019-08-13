@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Android Submission</string>
+    <string name="app_name">Pokedex</string>
+    <string name="pokemon_name">Nama Pokemon</string>
 </resources>
