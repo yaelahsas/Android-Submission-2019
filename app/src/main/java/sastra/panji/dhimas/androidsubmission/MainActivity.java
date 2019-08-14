@@ -1,5 +1,6 @@
 package sastra.panji.dhimas.androidsubmission;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -33,8 +36,24 @@ public class MainActivity extends AppCompatActivity {
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.about, menu);
-        return super.onCreateOptionsMenu(menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.about, menu);
+        return true;
+    }
+
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.aboutMenu:
+                tampilAbout();
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     private void pokemonList(){
@@ -51,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
     }
     private void showSelectedHero(Pokemon pokemon) {
         Toast.makeText(this, "Kamu memilih " + pokemon.getNames(), Toast.LENGTH_SHORT).show();
+    }
+
+   private void tampilAbout(){
+        Intent about = new Intent(MainActivity.this, About.class);
+        startActivity(about);
     }
 
 }
