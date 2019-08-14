@@ -40,10 +40,14 @@ public class ListPokemon extends RecyclerView.Adapter<ListPokemon.ListViewHolder
         holder.tvType1.setText(pokemon.getType1());
         if (pokemon.getType2().equals("")) {
             holder.tvType2.setVisibility(View.INVISIBLE);
+          //  holder.dtltvType2.setVisibility(View.INVISIBLE);
 
         } else {
             holder.tvType2.setText(pokemon.getType2());
+         //   holder.dtltvType2.setText(pokemon.getType2());
+
         }
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,12 +69,28 @@ public class ListPokemon extends RecyclerView.Adapter<ListPokemon.ListViewHolder
         TextView tvType1;
         TextView tvType2;
 
+        //For Details
+        ImageView dtlimgPhoto;
+        TextView dtltvName;
+        TextView dtltvType1;
+        TextView dtltvType2;
+        TextView dtlDesc;
+
         ListViewHolder(View itemView) {
             super(itemView);
             imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tmp_name);
             tvType1 = itemView.findViewById(R.id.typePokemon);
             tvType2 = itemView.findViewById(R.id.typePokemon2);
+
+            //For Details
+
+            dtlimgPhoto = itemView.findViewById(R.id.detailsFoto);
+            dtltvName = itemView.findViewById(R.id.detailsNama);
+            dtltvType1 = itemView.findViewById(R.id.dtl_typePokemon);
+            dtltvType2 = itemView.findViewById(R.id.dtl_typePokemon2);
+            dtlDesc= itemView.findViewById(R.id.IsiDeskripsi);
+
         }
     }
 

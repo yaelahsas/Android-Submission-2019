@@ -2,20 +2,16 @@ package sastra.panji.dhimas.androidsubmission;
 
 import android.app.Dialog;
 import android.content.Intent;
-import android.provider.ContactsContract;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -33,8 +29,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
         detailsDialog = new Dialog(this);
         viewPokemon = findViewById(R.id.View_pokemon);
         viewPokemon.setHasFixedSize(true);
@@ -72,7 +67,14 @@ public class MainActivity extends AppCompatActivity {
         listPokemonnya.setOnItemClickCallback(new ListPokemon.OnItemClickCallback() {
             @Override
             public void onItemClicked(Pokemon pokemon) {
-                showSelectedHero(pokemon);
+               // showSelectedHero(pokemon);
+                Intent details = new Intent(MainActivity.this, Detailnya.class);
+                details.putExtra("Foto",pokemon.getImages());
+                details.putExtra("type1",pokemon.getType1());
+                details.putExtra("nama",pokemon.getNames());
+                details.putExtra("type2", pokemon.getType2());
+                details.putExtra("desc",pokemon.getDeskripsi());
+                startActivity(details);
             }
         });
     }

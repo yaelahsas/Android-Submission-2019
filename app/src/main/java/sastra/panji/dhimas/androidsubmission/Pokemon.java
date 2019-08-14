@@ -5,6 +5,15 @@ public class Pokemon {
     private String names;
     private String images;
     private String type1;
+    private String deskripsi;
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
 
     public String getType1() {
         return type1;
