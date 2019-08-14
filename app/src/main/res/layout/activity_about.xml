@@ -31,4 +31,22 @@
         android:text="dhimaspanji66@gmail.com"
         android:textColor="#2C5364" />
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_gravity=""
+        android:src="@mipmap/logo_git" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="https://github.com/yaelahsas/Android-Submission-2019"
+        android:textColor="@color/text"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"/>
+</LinearLayout>
+
 </LinearLayout>
