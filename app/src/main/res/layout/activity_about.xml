@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/abuabu"
+    android:orientation="vertical"
+    tools:context=".About">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/saya" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:height="16sp"
+        android:gravity="center"
+        android:text="DHIMAS PANJI SASTRA"
+        android:textColor="@color/text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="dhimaspanji66@gmail.com"
+        android:textColor="#2C5364" />
+
+</LinearLayout>
