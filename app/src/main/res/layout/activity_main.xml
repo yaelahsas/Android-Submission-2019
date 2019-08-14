@@ -5,16 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@color/toolbar"/>
-        
+            android:background="@color/toolbar" />
+
         <android.support.v7.widget.RecyclerView
             android:id="@+id/View_pokemon"
             android:layout_width="match_parent"
@@ -22,8 +24,6 @@
             android:layout_marginTop="1dp"
             tools:listitem="@layout/item_pokemon" />
     </LinearLayout>
-
-
 
 
 </RelativeLayout>
